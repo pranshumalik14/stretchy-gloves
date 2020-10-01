@@ -1,0 +1,6 @@
+#ifndef STRETCHY_GLOVES_CALIBRATE_H
+#define STRETCHY_GLOVES_CALIBRATE_H
+
+// handles calibration
+
+#endif //STRETCHY_GLOVES_CALIBRATE_H
