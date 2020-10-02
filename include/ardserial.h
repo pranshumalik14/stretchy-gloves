@@ -5,10 +5,10 @@
 #include <cstdarg>
 
 // custom arduino serial commands
-namespace ardserial {
-#define ARDBUFFER 16        // buffer length in printf after which output flushed into Serial.print()
-
-    int printf(char *str, ...); // c-style printf for printing multiple variables in one line over Arduino Serial
+namespace ardserial
+{
+const size_t ARDBUFFER = 16; // buffer length in printf after which output flushed into Serial.print()
+int printf(char *str, ...);	 // c-style printf for printing multiple variables in one line over Arduino Serial
 } // ardserial
 
 #endif //STRETCHY_GLOVES_ARDSERIAL_H
