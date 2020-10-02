@@ -27,7 +27,7 @@ BinPackParameters: true
 BraceWrapping:
   AfterCaseLabel: false
   AfterClass: true
-  AfterControlStatement: true
+  AfterControlStatement: Always
   AfterEnum: true
   AfterFunction: true
   AfterNamespace: true
@@ -79,7 +79,7 @@ IncludeCategories:
     SortPriority: 0
 IncludeIsMainRegex: '(Test)?$'
 IncludeIsMainSourceRegex: ''
-IndentCaseLabels: false
+IndentCaseLabels: true
 IndentGotoLabels: true
 IndentPPDirectives: None
 IndentWidth: 4

@@ -8,10 +8,10 @@
 namespace ardserial
 {
 // buffer length in printf after which output flushed into Serial.print()
-const size_t ARDBUFFER = 16;
+const int ARDBUFFER = 16;
 
 // c-style printf for printing multiple variables in one line over Arduino Serial
-int printf(char *str, ...);
+int printf(const char *str, ...);
 } // namespace ardserial
 
 #endif // STRETCHY_GLOVES_ARDSERIAL_H
