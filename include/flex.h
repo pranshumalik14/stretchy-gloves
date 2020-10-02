@@ -5,9 +5,10 @@
 #include "ardserial.h"
 #include "constants.h"
 
-namespace flex {
-    // TODO: accept sensor list from a user-friendly name to then read-out in an array/vector (see if stl supported)
-    void read_sensors();
-} // flex
+namespace flex
+{
+// TODO: accept sensor list from a user-friendly name to then read-out in an array/vector (see if stl supported)
+void read_sensors();
+} // namespace flex
 
-#endif //STRETCHY_GLOVES_FLEX_H
+#endif // STRETCHY_GLOVES_FLEX_H
