@@ -59,6 +59,7 @@ int printf(char *str, ...)
 			}
 		}
 	}
+
 	Serial.println();
 	return count + 1;
 }
