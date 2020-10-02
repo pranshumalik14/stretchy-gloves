@@ -3,4 +3,4 @@
 
 // handles calibration
 
-#endif //STRETCHY_GLOVES_CALIBRATE_H
+#endif // STRETCHY_GLOVES_CALIBRATE_H

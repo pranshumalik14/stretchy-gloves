@@ -3,4 +3,4 @@
 
 // handles HC-05 bluetooth module configuration and connection
 
-#endif //STRETCHY_GLOVES_BT_H
+#endif // STRETCHY_GLOVES_BT_H

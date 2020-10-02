@@ -3,4 +3,4 @@
 
 // handles MPU-6050 accelerometer and gyroscope module configuration and connection
 
-#endif //STRETCHY_GLOVES_IMU_H
+#endif // STRETCHY_GLOVES_IMU_H

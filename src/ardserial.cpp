@@ -23,7 +23,7 @@ int printf(char *str, ...)
 		{
 			temp[j] = '\0';
 			Serial.print(temp);
-			j = 0;
+			j		= 0;
 			temp[0] = '\0';
 
 			switch (str[++i])
@@ -50,7 +50,8 @@ int printf(char *str, ...)
 		else
 		{
 			temp[j] = str[i];
-			j = (j + 1) % ARDBUFFER;
+			j		= (j + 1) % ARDBUFFER;
+
 			if (j == 0)
 			{
 				temp[ARDBUFFER] = '\0';
