@@ -18,5 +18,5 @@ void setup()
 void loop()
 {
 	flex::read_sensors();
-	delay(100); // 100 ms
+	delay(100);
 }
