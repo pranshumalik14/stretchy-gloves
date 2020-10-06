@@ -4,3 +4,4 @@ cmake-build-*/
 test/
 lib/
 .idea/
+.vscode/
