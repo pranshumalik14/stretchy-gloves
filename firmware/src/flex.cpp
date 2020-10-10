@@ -1,7 +1,5 @@
 #include "flex.h"
 
-namespace asrl = ardserial;
-
 namespace flex
 {
 void read_sensors()
@@ -22,6 +20,6 @@ void read_sensors()
 	float voltage1 = static_cast<float>(sensorValue1) * CONVERSION_RATIO;
 
 	// print out the value you read
-	asrl::printf("V1: %f\tV2: %f\tV3: %f\tV4: %f\tV5: %f", voltage1, voltage2, voltage3, voltage4, voltage5);
+	ardserial::printf("V1: %f\tV2: %f\tV3: %f\tV4: %f\tV5: %f", voltage1, voltage2, voltage3, voltage4, voltage5);
 }
 } // namespace flex

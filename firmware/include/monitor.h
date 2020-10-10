@@ -1,0 +1,4 @@
+#ifndef FIRMWARE_MONITOR_H
+#define FIRMWARE_MONITOR_H
+
+#endif // FIRMWARE_MONITOR_H

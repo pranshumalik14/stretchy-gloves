@@ -5,18 +5,24 @@
 #include "flex.h"
 #include "fsm.h"
 #include "imu.h"
+#include "monitor.h"
+
 #include <Arduino.h>
 
-namespace asrl = ardserial;
+#define RIGHT_HAND (true);
 
 void setup()
 {
 	Serial.begin(common::BAUD_RATE);
 	analogReadResolution(common::ADC_RESOLUTION);
+	pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop()
 {
 	flex::read_sensors();
-	delay(100);
+	digitalWriteFast(LED_BUILTIN, HIGH);
+	delay(600); // 500 ms
+	digitalWriteFast(LED_BUILTIN, LOW);
+	delay(300); // 500 ms
 }
