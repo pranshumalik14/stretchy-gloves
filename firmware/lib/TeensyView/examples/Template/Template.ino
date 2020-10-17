@@ -1,18 +1,33 @@
-#include "ardserial.h"
-#include "bt.h"
-#include "calibrate.h"
-#include "constants.h"
-#include "flex.h"
-#include "fsm.h"
-#include "imu.h"
-#include "monitor.h"
+/******************************************************************************
+  Template.ino
+  A useful starting place when adding a TeensyView to an existing project.
 
-#include <Arduino.h>
-#define RIGHT_HAND(true) ;
+  Marshall Taylor @ SparkFun Electronics, March 15, 2017
+  https://github.com/sparkfun/SparkFun_TeensyView_Arduino_Library
 
-namespace asrl = ardserial;
+  This example sets up the TeensyView and draws a test frame repeatedly.
+  The objects in the frame were selected to give copy-paste examples for various
+  common operations without a lot of chaff.  See TeensyView.h for specifics.
 
-#include <SPI.h>
+  Compatible with:
+  Teensy LC
+  Teensy 3.1
+  Teensy 3.2
+  Teensy 3.5
+  Teensy 3.6
+
+  Development environment specifics:
+  Arduino IDE 1.6.12 w/ Teensyduino 1.31
+  Arduino IDE 1.8.1 w/ Teensyduino 1.35
+  TeensyView v1.0
+
+  This code is released under the [MIT License](http://opensource.org/licenses/MIT).
+
+  Please review the LICENSE.md file included with this example. If you have any questions
+  or concerns with licensing, please contact techsupport@sparkfun.com.
+
+  Distributed as-is; no warranty is given.
+******************************************************************************/
 #include <TeensyView.h> // Include the SFE_TeensyView library
 
 ///////////////////////////////////
@@ -36,8 +51,6 @@ TeensyView oled(PIN_RESET, PIN_DC, PIN_CS, PIN_SCK, PIN_MOSI);
 
 void setup()
 {
-	Serial.begin(common::BAUD_RATE);
-	analogReadResolution(common::ADC_RESOLUTION);
 	oled.begin();	  // Initialize the OLED
 	oled.clear(ALL);  // Clear the display's internal memory
 	oled.display();	  // Display what's in the buffer (splashscreen)
@@ -47,7 +60,6 @@ void setup()
 
 void loop()
 {
-	flex::read_sensors();
 	oled.clear(PAGE); // Clear the page
 
 	oled.rect(5, 5, 20, 20);		 // Draw a rectangle
@@ -64,5 +76,6 @@ void loop()
 	oled.print("Hello");	// Write a byte out as a character
 
 	oled.display(); // Send the PAGE to the OLED memory
-	delay(100);
+
+	delay(200);
 }
